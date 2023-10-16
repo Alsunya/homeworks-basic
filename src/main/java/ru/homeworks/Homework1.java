@@ -1,8 +1,8 @@
-package src.main.java.ru.homeworks.homework1;
+package src.main.java.ru.homeworks;
 
 import java.util.Scanner;
 
-public class HomeWork1 {
+public class Homework1 {
     //Цель: научиться решать простые задачи с использованием изученных конструкций языка Java.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
