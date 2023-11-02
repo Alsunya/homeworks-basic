@@ -1,5 +1,7 @@
 package src.main.java.ru.homeworks;
 
+import java.util.Arrays;
+
 public class Homework3 {
     //Цель: научиться решать простые задачи с использованием изученных конструкций языка Java.
     public static void main(String[] args) {
@@ -40,14 +42,13 @@ public class Homework3 {
     //Метод, принимающий в качестве аргумента двумерный целочисленный массив,
     //и зануляющий его диагональные элементы;
     public static void zeroDiagonal(int[][] array){
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if(i == j){
-                    array[i][j] = 0;
-                }
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.println();
+        int length = array.length;
+        for (int i = 0; i < length; i++) {
+            array[i][i] = 0;
+            array[i][length - i - 1] = 0;
+        }
+        for (int[] ints : array) {
+            System.out.println(Arrays.toString(ints));
         }
         System.out.println();
     }
@@ -72,10 +73,8 @@ public class Homework3 {
         if(array.length < 2){
             return -1;
         }
-        for (int i = 1; i < 2; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                sum += array[i][j];
-            }
+        for (int j = 0; j < array[1].length; j++) {
+            sum += array[1][j];
         }
         return sum;
     }
