@@ -11,7 +11,7 @@ public class Box {
     private final int length;
     private String color;
     private boolean isOpen = true;
-    private String content = null;
+    private String content;
 
     public Box(int width, int length, String color) {
         this.width = width;
