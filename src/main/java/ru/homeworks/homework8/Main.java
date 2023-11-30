@@ -22,11 +22,10 @@ public class Main {
     }
     public static int sum(String[][] array) {
         int sum = 0;
-        if (array.length != 4 | array[0].length != 4 | array[1].length != 4 |
-                array[2].length != 4 | array[3].length != 4)
-            throw new AppArraySizeException("Передан массив размера != [4][4]");
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array.length != 4 | array[i].length != 4)
+                    throw new AppArraySizeException("Передан массив размера != [4][4]");
                 try {
                     sum += Integer.parseInt(array[i][j]);
                 }catch (NumberFormatException e){
