@@ -3,7 +3,7 @@ package src.main.java.ru.homeworks.homework9;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static src.main.java.ru.homeworks.homework9.Employee.*;
+import static src.main.java.ru.homeworks.homework9.EmployeesController.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class Main {
         System.out.println(arrayList);
         System.out.println(getNames(employees));
         System.out.println(getEmployeesElderOrEqualAge(employees, 27));
-        System.out.println(isAverageAgeBigger(employees, 33));
+        System.out.println(isAverageAgeBigger(employees, 20));
         System.out.println(getYoungest(employees));
     }
 
