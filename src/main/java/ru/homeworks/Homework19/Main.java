@@ -1,6 +1,7 @@
 package src.main.java.ru.homeworks.Homework19;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * ТЗ:
@@ -27,7 +28,7 @@ public class Main {
         appleBox.addFruit(apple2);
         System.out.println("Вес коробки для апельсинов - " + orangeBox.weight());
         System.out.println("Вес коробки1 для яблок - " + appleBox.weight());
-        Box<Apple> appleBox2 = new Box<>(Arrays.asList());
+        Box<Apple> appleBox2 = new Box<>(List.of());
         System.out.println("Вес коробки2 для яблок - " + appleBox2.weight());
         appleBox.putInto(appleBox2);
         System.out.println("Вес коробки для апельсинов - " + orangeBox.weight());
