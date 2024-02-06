@@ -1,5 +1,7 @@
 package src.main.java.ru.homeworks.Homework19;
 
+import java.util.Arrays;
+
 /**
  * ТЗ:
  * Создайте классы Fruit, Apple extends Fruit, Orange extends Fruit;
@@ -20,18 +22,17 @@ public class Main {
         Orange orange = new Orange(3);
         Apple apple2 = new Apple(1);
         Orange orange2 = new Orange(3);
-        Box<Apple> appleBox = new Box<>(apple, apple2);
-        Box<Orange> orangeBox = new Box<>(orange, orange2);
+        Box<Apple> appleBox = new Box<>(Arrays.asList(apple, apple2));
+        Box<Orange> orangeBox = new Box<>(Arrays.asList(orange, orange2));
         appleBox.addFruit(apple2);
         System.out.println("Вес коробки для апельсинов - " + orangeBox.weight());
         System.out.println("Вес коробки1 для яблок - " + appleBox.weight());
-        Box<Apple> appleBox2 = new Box<>();
+        Box<Apple> appleBox2 = new Box<>(Arrays.asList());
         System.out.println("Вес коробки2 для яблок - " + appleBox2.weight());
         appleBox.putInto(appleBox2);
         System.out.println("Вес коробки для апельсинов - " + orangeBox.weight());
         System.out.println("Вес коробки1 для яблок после пересыпания - " + appleBox.weight());
         System.out.println("Вес коробки2 для яблок после пересыпания - " + appleBox2.weight());
         System.out.println("Равны ли по весу коробки для яблок? - " + appleBox.compare(orangeBox));
-
     }
 }
