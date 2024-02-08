@@ -1,4 +1,4 @@
-package ru.homeworks.Homework22;
+package ru.homeworks.homework22;
 
 import java.util.Arrays;
 

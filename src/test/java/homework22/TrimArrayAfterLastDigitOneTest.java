@@ -1,23 +1,25 @@
-package Homework22;
+package homework22;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static ru.homeworks.Homework22.Main.trimArrayAfterLastDigitOne;
+import static ru.homeworks.homework22.Main.trimArrayAfterLastDigitOne;
 
-public class TrimArrayAfterLastDigitOneTest {
+class TrimArrayAfterLastDigitOneTest {
     @Test
-    public void trimArrayAfterLastDigitOnePositiveTest(){
+    void trimArrayAfterLastDigitOnePositiveTest() {
         int[] arr = {1, 2, 3, 1, 1, 3, 4};
         Assertions.assertArrayEquals(new int[]{3, 4}, trimArrayAfterLastDigitOne(arr));
     }
+
     @Test
-    public void shouldThrowAnExceptionTest(){
+    void shouldThrowAnExceptionTest() {
         int[] arr = {3, 2, 3, 6, 3, 3, 4};
         Assertions.assertThrowsExactly(RuntimeException.class, () -> trimArrayAfterLastDigitOne(arr));
     }
+
     @Test
-    public void trimArrayAfterLastDigitOneReturnEmptyArrayTest(){
+    void trimArrayAfterLastDigitOneReturnEmptyArrayTest() {
         int[] arr = {1, 2, 3, 1};
         Assertions.assertArrayEquals(new int[]{}, trimArrayAfterLastDigitOne(arr));
     }
