@@ -1,4 +1,4 @@
-package src.main.java.ru.homeworks.Homework19;
+package ru.homeworks.homework19;
 
 public class Apple extends Fruit{
     public Apple(int weight) {

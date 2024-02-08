@@ -1,4 +1,4 @@
-package src.main.java.ru.homeworks.Homework19;
+package ru.homeworks.homework19;
 
 import java.util.Arrays;
 import java.util.List;
