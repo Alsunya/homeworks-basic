@@ -1,4 +1,4 @@
-package src.main.java.ru.homeworks.Homework21;
+package ru.homeworks.homework21;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -18,9 +18,9 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         Main app = new Main();
         ExecutorService executorService = Executors.newFixedThreadPool(3);
-        executorService.execute(() -> app.printA());
-        executorService.execute(() -> app.printB());
-        executorService.execute(() -> app.printC());
+        executorService.execute(app::printA);
+        executorService.execute(app::printB);
+        executorService.execute(app::printC);
         executorService.shutdown();
     }
 
